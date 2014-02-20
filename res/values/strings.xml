@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Play Mark Murphy</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_rotation_fragment">RotationFragmentActivity</string>
+    <string name="title_activity_files_demo">FilesDemoActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_pref_fragment">PrefFragmentActivity</string>
+    <string name="title_activity_edit_prefs">EditPrefsActivity</string>
+    <string name="title_activity_faux_sender">FauxSenderActivity</string>
+    <string name="title_activity_faux_sender_test">FauxSenderTestActivity</string>
+    <string name="title_activity_battery_monitor">BatteryMonitorActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="title_activity_fake_player">FakePlayerActivity</string>
+    <string name="title_activity_demo_downloader">DemoDownloaderActivity</string>
+    <string name="title_activity_simple_alarm">SimpleAlarmActivity</string>
+    <string name="title_activity_scheduled_service_trigger">ScheduledServiceTriggerActivity</string>
+
+</resources>

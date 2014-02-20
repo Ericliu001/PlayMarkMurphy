@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playmarkmurphy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver android:name="com.playmarkmurphy.broadcast.OnBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.playmarkmurphy.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.fragment.RotationFragmentActivity"
+            android:label="@string/title_activity_rotation_fragment" >
+        </activity>
+        <activity android:name="com.playmarkmurphy.async.AsyncActivity" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.file.FilesDemoActivity"
+            android:label="@string/title_activity_files_demo" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.pref.PrefFragmentActivity"
+            android:label="@string/title_activity_pref_fragment" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.pref.EditPrefsActivity"
+            android:label="@string/title_activity_edit_prefs" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.intent.FauxSenderActivity"
+            android:label="@string/title_activity_faux_sender" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="text/plain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.intent.FauxSenderTestActivity"
+            android:label="@string/title_activity_faux_sender_test" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.broadcast.BatteryMonitorActivity"
+            android:label="@string/title_activity_battery_monitor" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.download.DownloadActivity"
+            android:label="@string/title_activity_download" >
+        </activity>
+
+        <service android:name="com.playmarkmurphy.service.PlayerService" >
+        </service>
+
+        <activity
+            android:name="com.playmarkmurphy.service.FakePlayerActivity"
+            android:label="@string/title_activity_fake_player" >
+        </activity>
+        <activity
+            android:name="com.playmarkmurphy.service.DemoDownloaderActivity"
+            android:label="@string/title_activity_demo_downloader" >
+        </activity>
+
+        <service android:name="com.playmarkmurphy.service.Downloader" >
+        </service>
+
+        <activity
+            android:name="com.playmarkmurphy.alarm.SimpleAlarmActivity"
+            android:label="@string/title_activity_simple_alarm" >
+        </activity>
+
+        <receiver android:name="com.playmarkmurphy.alarm.PollReceiver" >
+            <intent-filter>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.playmarkmurphy.alarm.ScheduledService" >
+        </service>
+
+        <activity
+            android:name="com.playmarkmurphy.alarm.ScheduledServiceTriggerActivity"
+            android:label="@string/title_activity_scheduled_service_trigger" >
+        </activity>
+    </application>
+
+</manifest>

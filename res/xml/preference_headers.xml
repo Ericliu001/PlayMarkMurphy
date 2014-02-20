@@ -1,0 +1,14 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <header
+        android:fragment="com.playmarkmurphy.pref.EditPrefsActivity$First"
+        android:summary="This is the first preference header"
+        android:title="Header One" >
+    </header>
+    <header
+        android:fragment="com.playmarkmurphy.pref.EditPrefsActivity$Second"
+        android:summary="This is the Second preference header"
+        android:title="Header Two" >
+    </header>
+
+</preference-headers>
